@@ -1,52 +1,52 @@
-# 思源闪卡小助手 🎯
+# SiYuan Flashcard Assistant 🎯
 
-一个专为思源笔记设计的闪卡小助手插件，让你的复习更高效、更便捷！
+A powerful flashcard assistant plugin designed for SiYuan Note, making your reviews more efficient and convenient!
 
-[中文](./README.md) | [English](./README_en_US.md)
+[English](./README.md) | [中文](./README_zh_CN.md)
 
-## ✨ 核心功能
+## ✨ Core Features
 
-### 🚀 闪卡快速调用
+### 🚀 Quick Flashcard Access
 
-页面右侧悬浮小圆球，一键打开闪卡复习！
+Floating ball on the right side of the page, open flashcard review with one click!
 
-**解决手机端每次都需要点设置的烦恼** - 不用再繁琐地进入设置菜单，直接点击小圆球即可开始复习。
+**Solves the hassle of tapping settings every time on mobile** - No more tedious navigation through settings menu, just tap the floating ball to start reviewing.
 
-### 📚 闪卡快速回顾
+### 📚 Quick Flashcard Review
 
-**智能记录筛选历史，一键切换到上次的筛选！**
+**Smart filter history recording, switch back to your last filter with one click!**
 
-当你使用思源闪卡的筛选功能时（比如筛选某个文档或笔记本的闪卡），插件会**自动记住你的筛选**。下次想复习同样的内容时，点击小圆球选择历史记录，立即切换到之前的筛选。
+When you use SiYuan's flashcard filter feature (e.g., filtering flashcards from a specific document or notebook), the plugin **automatically remembers your filter**. Next time you want to review the same content, just tap the floating ball and select from history to instantly switch to your previous filter.
 
-**功能特点：**
-- 🤖 自动记录筛选历史
-- 📌 固定常用筛选
-- 📊 使用次数统计
-- 🎯 智能排序
-- 🗑️ 灵活管理
+**Features:**
+- 🤖 Auto-record filter history
+- 📌 Pin frequently-used filters
+- 📊 Usage statistics
+- 🎯 Smart sorting
+- 🗑️ Flexible management
 
-**适用场景：**
-- 每天复习固定的单词本、错题集
-- 在多个学科/主题的闪卡间快速切换
-- 回到上次复习的内容继续学习
+**Use Cases:**
+- Daily review of fixed vocabulary or mistake collections
+- Quick switching between flashcards from different subjects/topics
+- Continue learning from where you left off
 
-## 💖 支持开发
+## 💖 Support Development
 
-如果这个插件对你有帮助，欢迎支持开发者！
+If this plugin helps you, welcome to support the developer!
 
 <div align="center">
-<img src="https://i0.hdslb.com/bfs/openplatform/3b4d37a5285096d3493d09ca88280d9acf90129e.png@1e_1c.webp" width="200" alt="赞助码"/>
+<img src="https://i0.hdslb.com/bfs/openplatform/3b4d37a5285096d3493d09ca88280d9acf90129e.png@1e_1c.webp" width="200" alt="Sponsor QR Code"/>
 
-**扫码支持开发者** ☕
+**Scan to Support Developer** ☕
 </div>
 
-你的支持是我持续优化插件的动力！
+Your support is my motivation to keep optimizing this plugin!
 
 ---
 
 <div align="center">
 
-**让复习更高效，让学习更轻松** 🎓
+**Make reviewing more efficient, make learning easier** 🎓
 
 Made with ❤️ for SiYuan Note
 
