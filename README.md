@@ -45,7 +45,7 @@ Through the quick review feature, efficiently review flashcards to consolidate l
 ### Prerequisites
 
 1. Clone the repository
-   ```bash
+        ```bash
    git clone https://github.com/Administrator/siyuan-flashcard-assistant.git
    cd siyuan-flashcard-assistant
    ```

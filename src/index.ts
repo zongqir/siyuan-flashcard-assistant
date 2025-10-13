@@ -37,6 +37,9 @@ import SettingExample from "@/setting-example.svelte";
 import { SettingUtils } from "./libs/setting-utils";
 import { svelteDialog } from "./libs/dialog";
 
+// 引入闪卡快切功能
+import { FlashcardQuickSwitchManager } from "./flashcard";
+
 const STORAGE_NAME = "menu-config";
 const TAB_TYPE = "custom_tab";
 const DOCK_TYPE = "dock_tab";
@@ -47,6 +50,9 @@ export default class PluginSample extends Plugin {
     private isMobile: boolean;
     private blockIconEventBindThis = this.blockIconEvent.bind(this);
     private settingUtils: SettingUtils;
+    
+    // 闪卡快切管理器
+    private flashcardManager: FlashcardQuickSwitchManager;
 
 
     updateProtyleToolbar(toolbar: Array<string | IMenuItem>) {
@@ -336,6 +342,9 @@ export default class PluginSample extends Plugin {
         };
 
         console.log(this.i18n.helloPlugin);
+        
+        // 初始化闪卡快切功能
+        this.initFlashcardQuickSwitch();
     }
 
     onLayoutReady() {
@@ -391,6 +400,12 @@ export default class PluginSample extends Plugin {
 
     async onunload() {
         console.log(this.i18n.byePlugin);
+        
+        // 销毁闪卡快切管理器
+        if (this.flashcardManager) {
+            await this.flashcardManager.destroy();
+        }
+        
         showMessage("Goodbye SiYuan Plugin");
         console.log("onunload");
     }
@@ -1007,5 +1022,33 @@ export default class PluginSample extends Plugin {
             return;
         }
         return editors[0];
+    }
+    
+    /**
+     * 初始化闪卡快切功能
+     */
+    private async initFlashcardQuickSwitch() {
+        try {
+            console.log('初始化闪卡快切功能...');
+            
+            // 创建闪卡管理器实例
+            this.flashcardManager = new FlashcardQuickSwitchManager({
+                enabled: true,
+                maxHistory: 10,
+                ballPosition: { x: 20, y: 100 },
+                autoHide: false,
+                showUsageCount: true,
+                enableDrag: true
+            });
+            
+            // 初始化管理器
+            await this.flashcardManager.initialize();
+            
+            console.log('闪卡快切功能初始化成功！');
+            
+        } catch (error) {
+            console.error('闪卡快切功能初始化失败:', error);
+            showMessage('闪卡快切功能初始化失败，请查看控制台');
+        }
     }
 }
