@@ -1,11 +1,11 @@
 {
-  "name": "plugin-sample-vite-svelte",
+  "name": "siyuan-flashcard-assistant",
   "version": "0.4.1",
   "type": "module",
-  "description": "This is a sample plugin based on vite and svelte for Siyuan (https://b3log.org/siyuan)",
-  "repository": "",
-  "homepage": "",
-  "author": "frostime",
+  "description": "A powerful flashcard assistant for SiYuan, helping you review better with quick flashcard recall and invocation",
+  "repository": "https://github.com/Administrator/siyuan-flashcard-assistant",
+  "homepage": "https://github.com/Administrator/siyuan-flashcard-assistant",
+  "author": "Administrator",
   "license": "MIT",
   "scripts": {
     "dev": "cross-env NODE_ENV=development VITE_SOURCEMAP=inline vite build --watch",
@@ -33,5 +33,6 @@
     "vite": "^5.2.9",
     "vite-plugin-static-copy": "^1.0.2",
     "vite-plugin-zip-pack": "^1.0.5"
-  }
+  },
+  "packageManager": "pnpm@10.17.0+sha512.fce8a3dd29a4ed2ec566fb53efbb04d8c44a0f05bc6f24a73046910fb9c3ce7afa35a0980500668fa3573345bd644644fa98338fa168235c80f4aa17aa17fbef"
 }

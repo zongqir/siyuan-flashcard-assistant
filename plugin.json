@@ -1,7 +1,7 @@
 {
-  "name": "plugin-sample-vite-svelte",
-  "author": "frostime",
-  "url": "https://github.com/siyuan-note/plugin-sample-vite-svelte",
+  "name": "siyuan-flashcard-assistant",
+  "author": "Administrator",
+  "url": "https://github.com/Administrator/siyuan-flashcard-assistant",
   "version": "0.4.1",
   "minAppVersion": "3.2.1",
   "disabledInPublish": true,
@@ -22,12 +22,12 @@
     "desktop-window"
   ],
   "displayName": {
-    "en_US": "Plugin sample with vite and svelte",
-    "zh_CN": "插件样例 vite + svelte 版"
+    "en_US": "Flashcard Assistant",
+    "zh_CN": "思源闪卡小助手"
   },
   "description": {
-    "en_US": "SiYuan plugin sample with vite and svelte",
-    "zh_CN": "使用 vite 和 svelte 开发的思源插件样例"
+    "en_US": "A powerful flashcard assistant for SiYuan, helping you review better with quick flashcard recall and invocation",
+    "zh_CN": "思源笔记的闪卡小助手，专为高效复习而设计，支持闪卡快速调用和快速回顾两大核心功能"
   },
   "readme": {
     "en_US": "README.md",
@@ -39,8 +39,13 @@
     ]
   },
   "keywords": [
-    "plugin",
-    "sample",
-    "插件样例"
+    "flashcard",
+    "闪卡",
+    "复习",
+    "review",
+    "记忆",
+    "memory",
+    "学习",
+    "learning"
   ]
 }

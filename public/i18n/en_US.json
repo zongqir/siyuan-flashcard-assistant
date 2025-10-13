@@ -1,20 +1,32 @@
 {
-    "addTopBarIcon": "Add a top bar icon by plugin",
+    "addTopBarIcon": "Add Flashcard Assistant icon to top bar",
     "cancel": "Cancel",
     "save": "Save",
-    "byeMenu": "Bye, Menu!",
-    "helloPlugin": "Hello, Plugin!",
-    "byePlugin": "Bye, Plugin!",
-    "showDialog": "Show dialog",
-    "removedData": "Data deleted",
-    "confirmRemove": "Confirm to delete the data in ${name}?",
-    "insertEmoji": "Insert Emoji",
-    "removeSpace": "Remove Space",
-    "getTab": "Print out all opened custom tabs in the debugger",
-    "name": "SiYuan",
+    "quickInvoke": "Quick Invoke Flashcard",
+    "quickReview": "Quick Review",
+    "flashcardManage": "Flashcard Management",
+    "startReview": "Start Review",
+    "reviewMode": "Review Mode",
+    "showDialog": "Show Dialog",
+    "name": "Flashcard Assistant",
     "hello": {
-        "makesure": "Before using this template, please read the <a href=\"https://github.com/siyuan-note/plugin-sample\">offical sample</a>, make sure that you've known about the pipeline for plugin developing."
+        "welcome": "Welcome to Flashcard Assistant! This plugin is dedicated to providing an efficient flashcard review experience."
     },
-    "hintTitle":"About",
-    "hintDesc":"<a href='https://github.com/siyuan-note/plugin-sample-vite-svelte'>plugin-sample-vite-svelte</a><br>@frostime<br>@88250<br>@zxkmm"
+    "hintTitle": "About Flashcard Assistant",
+    "hintDesc": "<a href='https://github.com/Administrator/siyuan-flashcard-assistant'>🔗 Flashcard Assistant for SiYuan</a><br>🎯 Quick Flashcard Invocation<br>📚 Quick Flashcard Review<br>💡 Make review more efficient",
+    "settings": {
+        "title": "Flashcard Assistant Settings",
+        "enableQuickInvoke": "Enable Quick Invocation",
+        "enableQuickReview": "Enable Quick Review"
+    },
+    "menu": {
+        "openFlashcard": "Open Flashcard",
+        "reviewFlashcard": "Review Flashcard",
+        "manageFlashcard": "Manage Flashcard"
+    },
+    "tips": {
+        "noFlashcard": "No flashcards available, please create flashcards first",
+        "reviewComplete": "Congratulations! Review completed",
+        "startReviewTip": "Click to start your review journey"
+    }
 }
