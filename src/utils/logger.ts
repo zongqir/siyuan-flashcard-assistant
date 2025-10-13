@@ -2,7 +2,7 @@
  * Logger 工具 - 统一的日志管理
  */
 
-const DEBUG_MODE = true; // 可以通过配置控制
+const DEBUG_MODE = false; // 可以通过配置控制
 
 class Logger {
     private static prefix = '[FlashcardAssistant]';
