@@ -1,103 +1,53 @@
-# Flashcard Assistant for SiYuan
+# 思源闪卡小助手 🎯
 
-[中文版](./README_zh_CN.md)
+一个专为思源笔记设计的闪卡小助手插件，让你的复习更高效、更便捷！
 
-A powerful flashcard assistant plugin for SiYuan Note, making review more efficient and convenient.
+[中文](./README.md) | [English](./README_en_US.md)
 
-## ✨ Features
+## ✨ 核心功能
 
-This plugin is dedicated to enhancing the flashcard experience in SiYuan Note, addressing two core scenarios:
+### 🚀 闪卡快速调用
 
-### 🚀 Quick Flashcard Invocation
-- One-click quick access to flashcard features
-- Convenient flashcard management portal
-- Improved flashcard usage efficiency
+页面右侧悬浮小圆球，一键打开闪卡复习！
 
-### 📚 Quick Flashcard Review
-- Fast entry into review mode
-- Efficient flashcard review experience
-- Helps users better consolidate knowledge
+**解决手机端每次都需要点设置的烦恼** - 不用再繁琐地进入设置菜单，直接点击小圆球即可开始复习。
 
-## 📦 Installation
+### 📚 闪卡快速回顾
 
-### Install from Marketplace (Recommended)
-1. Open SiYuan Note
-2. Go to `Marketplace` - `Plugins`
-3. Search for `Flashcard Assistant`
-4. Click to download and enable
+**智能记录筛选历史，一键切换到上次的筛选！**
 
-### Manual Installation
-1. Download the latest release version
-2. Extract to the `data/plugins/` directory of SiYuan Note
-3. Restart SiYuan Note
-4. Enable the plugin in `Settings` - `Marketplace` - `Downloaded`
+当你使用思源闪卡的筛选功能时（比如筛选某个文档或笔记本的闪卡），插件会**自动记住你的筛选**。下次想复习同样的内容时，点击小圆球选择历史记录，立即切换到之前的筛选。
 
-## 🎯 Use Cases
+**功能特点：**
+- 🤖 自动记录筛选历史
+- 📌 固定常用筛选
+- 📊 使用次数统计
+- 🎯 智能排序
+- 🗑️ 灵活管理
 
-### Scenario 1: Learning New Knowledge
-While learning, quickly create and invoke flashcards to instantly transform important knowledge points into review materials.
+**适用场景：**
+- 每天复习固定的单词本、错题集
+- 在多个学科/主题的闪卡间快速切换
+- 回到上次复习的内容继续学习
 
-### Scenario 2: Regular Review
-Through the quick review feature, efficiently review flashcards to consolidate learned knowledge.
+## 💖 支持开发
 
-## 🛠️ Development
+如果这个插件对你有帮助，欢迎支持开发者！
 
-### Prerequisites
+<div align="center">
+<img src="https://i0.hdslb.com/bfs/openplatform/3b4d37a5285096d3493d09ca88280d9acf90129e.png@1e_1c.webp" width="200" alt="赞助码"/>
 
-1. Clone the repository
-        ```bash
-   git clone https://github.com/Administrator/siyuan-flashcard-assistant.git
-   cd siyuan-flashcard-assistant
-   ```
+**扫码支持开发者** ☕
+</div>
 
-2. Install dependencies
-   ```bash
-   pnpm install
-   ```
+你的支持是我持续优化插件的动力！
 
-3. Create development symbolic link
-   ```bash
-   pnpm run make-link
-   ```
-   
-   > Windows users may need administrator privileges or run in developer mode
+---
 
-4. Start development mode
-   ```bash
-   pnpm run dev
-   ```
+<div align="center">
 
-### Build for Release
+**让复习更高效，让学习更轻松** 🎓
 
-```bash
-pnpm run build
-```
+Made with ❤️ for SiYuan Note
 
-This will generate a `package.zip` file for release.
-
-## 📝 Tech Stack
-
-- Build Tool: Vite
-- Frontend Framework: Svelte 4
-- Language: TypeScript
-- Package Manager: pnpm
-
-## 🤝 Contributing
-
-Issues and Pull Requests are welcome!
-
-## 📄 License
-
-MIT License
-
-## 🙏 Acknowledgments
-
-- Thanks to the SiYuan Note team for the excellent plugin development framework
-- Based on the [plugin-sample-vite-svelte](https://github.com/siyuan-note/plugin-sample-vite-svelte) template
-
-## 📮 Feedback
-
-If you encounter any issues or have suggestions, please feel free to:
-
-- Submit a [GitHub Issue](https://github.com/Administrator/siyuan-flashcard-assistant/issues)
-- Post in the SiYuan Note community
+</div>

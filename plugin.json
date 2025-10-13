@@ -2,7 +2,7 @@
   "name": "siyuan-flashcard-assistant",
   "author": "Administrator",
   "url": "https://github.com/Administrator/siyuan-flashcard-assistant",
-  "version": "0.4.1",
+  "version": "1.0.0",
   "minAppVersion": "3.2.1",
   "disabledInPublish": true,
   "backends": [
