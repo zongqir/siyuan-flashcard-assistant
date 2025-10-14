@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:      # <--- 添加这一段
+      contents: write # <--- 授予仓库内容的写权限
     steps:
       # Checkout
       - name: Checkout
@@ -20,7 +22,7 @@ jobs:
           node-version: 20
           registry-url: "https://registry.npmjs.org"
 
-        # Install pnpm
+      # Install pnpm
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         id: pnpm-install
@@ -58,5 +60,5 @@ jobs:
           allowUpdates: true
           artifactErrorsFailBuild: true
           artifacts: "package.zip"
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }} # 这个 token 会自动获得上面声明的权限
           prerelease: false
