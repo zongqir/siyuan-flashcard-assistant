@@ -770,10 +770,6 @@ export class UIManager {
         const filter = this.historyManager.getFilter(filterId);
         if (!filter) return;
 
-        // 简单确认
-        const confirmed = confirm(`确定要删除筛选记录"${filter.name}"吗？`);
-        if (!confirmed) return;
-
         try {
             const success = await this.historyManager.removeFilter(filterId);
             if (success) {

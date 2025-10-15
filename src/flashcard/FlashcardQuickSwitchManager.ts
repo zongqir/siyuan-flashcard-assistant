@@ -833,111 +833,16 @@ export class FlashcardQuickSwitchManager {
     }
 
     /**
-     * 显示切换通知
+     * 显示切换通知 - 只在失败时记录日志，不弹窗
      */
     private showSwitchNotification(filter: FlashcardFilter, autoRefreshSuccess: boolean = false): void {
-        try {
-            // 创建通知元素
-            const isSuccess = autoRefreshSuccess;
-            const bgColor = isSuccess ? 'var(--b3-theme-primary, #4285f4)' : '#ff9800';
-            const icon = isSuccess ? '✓' : '⚠';
-            const title = isSuccess ? '筛选已切换' : '筛选已更新';
-            const message = isSuccess ? '界面已自动刷新' : '请手动刷新界面查看结果';
-            
-            const notification = document.createElement('div');
-            notification.innerHTML = `
-                <div style="
-                    position: fixed;
-                    top: 80px;
-                    right: 20px;
-                    background: linear-gradient(135deg, ${bgColor} 0%, ${bgColor}cc 100%);
-                    color: white;
-                    padding: 16px 20px;
-                    border-radius: 12px;
-                    box-shadow: 0 8px 25px rgba(66, 133, 244, 0.3), 0 4px 12px rgba(0,0,0,0.15);
-                    z-index: 9999;
-                    font-size: 14px;
-                    max-width: 350px;
-                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-                    backdrop-filter: blur(10px);
-                    animation: slideInRight 0.3s ease-out;
-                    cursor: pointer;
-                ">
-                    <div style="display: flex; align-items: center; margin-bottom: 8px;">
-                        <div style="width: 22px; height: 22px; background: rgba(255,255,255,0.25); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-weight: bold;">
-                            ${icon}
-                        </div>
-                        <strong>${title}</strong>
-                    </div>
-                    <div style="margin-left: 32px; opacity: 0.95; line-height: 1.4; margin-bottom: 4px;">
-                        ${filter.type === 'doc' ? '📄' : '📁'} ${filter.name}
-                    </div>
-                    <div style="margin-left: 32px; opacity: 0.8; font-size: 12px; line-height: 1.3;">
-                        ${message}
-                        ${!isSuccess ? '<br><small>💡 或尝试重新打开闪卡面板</small>' : ''}
-                    </div>
-                    ${!isSuccess ? `
-                        <div style="margin-left: 32px; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.2); font-size: 11px; opacity: 0.7;">
-                            <strong>调试信息：</strong> 数据已更新，但界面未自动刷新
-                        </div>
-                    ` : ''}
-                </div>
-                <style>
-                    @keyframes slideInRight {
-                        from {
-                            opacity: 0;
-                            transform: translateX(100px);
-                        }
-                        to {
-                            opacity: 1;
-                            transform: translateX(0);
-                        }
-                    }
-                </style>
-            `;
-
-            document.body.appendChild(notification);
-
-            // 根据成功状态决定显示时长
-            const displayTime = autoRefreshSuccess ? 3000 : 8000;
-            
-            setTimeout(() => {
-                if (document.contains(notification)) {
-                    notification.style.animation = 'slideOutRight 0.3s ease-in forwards';
-            setTimeout(() => {
-                if (document.contains(notification)) {
-                    notification.remove();
-                }
-                    }, 300);
-                }
-            }, displayTime);
-
-            // 添加退场动画样式
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes slideOutRight {
-                    from {
-                        opacity: 1;
-                        transform: translateX(0);
-                    }
-                    to {
-                        opacity: 0;
-                        transform: translateX(100px);
-                    }
-                }
-            `;
-            document.head.appendChild(style);
-            
-            // 清理样式
-            setTimeout(() => {
-                if (document.contains(style)) {
-                    style.remove();
-                }
-            }, 5000);
-
-        } catch (error) {
-            Logger.error('显示通知失败:', error);
+        // 成功时不显示任何消息
+        if (autoRefreshSuccess) {
+            return;
         }
+        
+        // 失败时只记录到控制台，不弹窗
+        Logger.warn(`筛选切换可能需要手动刷新: ${filter.name}`);
     }
 
     /**
