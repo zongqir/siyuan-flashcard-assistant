@@ -1,6 +1,6 @@
 {
   "name": "siyuan-flashcard-assistant",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "type": "module",
   "description": "A powerful flashcard assistant for SiYuan, helping you review better with quick flashcard recall and invocation",
   "repository": "https://github.com/zongqir/siyuan-flashcard-assistant",

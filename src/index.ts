@@ -14,12 +14,14 @@ export default class PluginSample extends Plugin {
     private flashcardManager: FlashcardQuickSwitchManager;
 
     async onload() {
-        // 初始化闪卡快切功能
-        await this.initFlashcardQuickSwitch();
+        // 插件加载完成
     }
 
     onLayoutReady() {
-        // 插件布局就绪
+        // 在布局就绪后初始化闪卡功能，确保DOM已准备好
+        setTimeout(async () => {
+            await this.initFlashcardQuickSwitch();
+        }, 500);
     }
 
     async onunload() {
